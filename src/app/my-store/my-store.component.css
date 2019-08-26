@@ -1,0 +1,185 @@
+
+
+
+
+
+/* mobile phone */
+@media(max-width:500px){
+    .storeContainer{
+        background-color: white;
+    }
+    .add_gap{
+        position: relative;
+        background-color: rgba(255, 255, 255, 0);
+        display: grid;
+        grid-template-columns: auto;
+        border-bottom: solid 2px rgb(194, 194, 194);
+        padding: 0 5%;
+    }
+    .add_gap ul{
+        margin: 5% 0;
+    
+    }
+    
+    /*  */
+    
+    .add_gap ul {
+    list-style-type: none;
+    padding: 0 ;
+    width: 100%;
+    /* width: 100%; */
+    /* background-color: #ffffff; */
+    position: relative;
+    /* top: 4.2%; */
+    /* height: 85vh; */
+    }
+    
+    .add_gap li a {
+    display: block;
+    color: #000;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    }
+    
+    /* Change the link color on hover */
+    .add_gap li a:hover {
+    background-color: rgb(151, 122, 98);
+    color: white;
+    }
+
+    .add_gap h1{
+        position: relative;
+        top: 30px;
+        font-size: 20px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.219);
+        color: rgb(0, 54, 41);
+        padding: 10px 5px;
+
+        display: none;
+
+
+
+
+    }
+}
+/* tablets */
+@media(min-width:426px) and (max-width:768px){
+    .storeContainer{
+        background-color: white;
+    }
+    .add_gap{
+        position: relative;
+        background-color: rgba(255, 255, 255, 0);
+        display: grid;
+        grid-template-columns: auto auto;
+        border-bottom: solid 2px rgb(194, 194, 194);
+        padding: 0 5%;
+    }
+    .add_gap ul{
+        margin: 5% 0;
+    
+    }
+    
+    /*  */
+    
+    .add_gap ul {
+    list-style-type: none;
+    padding: 0 ;
+    width: 100%;
+    /* width: 100%; */
+    /* background-color: #ffffff; */
+    position: relative;
+    /* top: 4.2%; */
+    /* height: 85vh; */
+    }
+    
+    .add_gap li a {
+    display: block;
+    color: #000;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    }
+    
+    /* Change the link color on hover */
+    .add_gap li a:hover {
+    background-color: rgb(151, 122, 98);
+    color: white;
+    }
+
+    .add_gap h1{
+        position: relative;
+        top: 30px;
+        font-size: 20px;
+        width: 500px;
+        background-color: rgba(255, 255, 255, 0.219);
+        color: rgb(0, 54, 41);
+        padding: 10px 20px;
+
+
+
+
+    }
+}
+/* laptops and beyonf */
+@media(min-width:769px){
+    .add_gap{
+        position: relative;
+        /* background-color: rgba(157, 255, 170, 0.164); */
+        display: grid;
+        grid-template-columns: auto auto;
+        border-bottom: solid 2px rgb(194, 194, 194);
+        padding: 0 5%;
+        margin: 50px 4%;
+    }
+    .add_gap ul{
+        margin: 5% 0;
+    
+    }
+    
+    /*  */
+    
+    .add_gap ul {
+    list-style-type: none;
+    padding: 0 ;
+    width: 100%;
+    /* width: 100%; */
+    /* background-color: #ffffff; */
+    position: relative;
+    /* top: 4.2%; */
+    /* height: 85vh; */
+    }
+    
+    .add_gap li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    }
+    
+    /* Change the link color on hover */
+    .add_gap li a:hover {
+    background-color: rgb(151, 122, 98);
+    color: white;
+    }
+
+    .add_gap h1{
+        position: relative;
+        left: 10%;
+        top: 5px;
+        font-size: 20px;
+        width: 500px;
+        background-color: rgba(255, 255, 255, 0.219);
+        color: rgb(0, 54, 41);
+        padding: 10px 20px;
+        font-family:sans-serif;
+
+
+
+    }
+}

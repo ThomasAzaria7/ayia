@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body >
+  <div *ngIf="currentProduct" class="productPreviewCOntainer" >
+    <section class="section1">
+        <div class="imageContainer" >
+          <div class="imageContainerInner">
+              <img width="100%" height="100%" [src]="displayImg" alt="">
+          </div>
+          <!-- <slideshow [imageUrls]="items.displayImg"></slideshow>  -->
+        </div>
+        <div  class="otherImgs" >
+            <img (click)="changePic(0)" [src]="imageUrlArray[0]"   alt="">
+            <img (click)="changePic(1)" [src]="imageUrlArray[1]"   alt="">
+            <img (click)="changePic(2)" [src]="imageUrlArray[2]"   alt="">
+            <img (click)="changePic(3)" [src]="imageUrlArray[3]"   alt="">
+       </div>
+
+        <div  class="productDiscription"> 
+            <h1>{{currentProduct.name}}</h1>
+            <hr>
+            <h4>Product Description</h4>
+            <p> {{currentProduct.description}}</p>
+            <div class="myButtons">
+                <p  class="price"> ${{currentProduct.price}}</p>
+                <div class="cartbutton">
+                    <i *ngIf="!added" (click)="buyItem1()" class="fas fa-shopping-cart"><span>add</span></i>
+                    <p *ngIf="added" routerLink="/checkout">Added!</p>
+                </div>
+                
+                 <!-- <i class="fas fa-heart"><span style="color: black; font-size: 12px"> Wishlist</span></i> -->
+        
+            </div>
+        </div>
+   
+    </section>
+
+  
+                <br><br><br>
+      <!--  -->
+    <div>
+          <script>
+       
+            
+            </script>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link " data-toggle="tab">Shipping & Handling</a>
+                </li>
+                <!--  -->
+                <li class="nav-item">
+                  <a class="nav-link " data-toggle="tab" >Ingredients</a>
+                </li>
+                <!--  -->
+                <li class="nav-item">
+                  <a class="nav-link" >Usage</a>
+                </li>
+                <!--  -->
+                <li class="nav-item">
+                  <a class="nav-link " >Review</a>
+                </li>
+              </ul>
+
+                <p >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur, nemo, corporis saepe, porro animi asperiores doloribus odio aut amet ea dolores necessitatibus sit! A iste nesciunt totam blanditiis voluptate?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur, nemo, corporis saepe, porro animi asperiores doloribus odio aut amet ea dolores necessitatibus sit! A iste nesciunt totam blanditiis voluptate?
+                </p>
+     </div>
+  
+
+
+  </div>
+
+    <section style="background-color: rgb(233, 233, 233)">
+      <h2 style="position: relative; padding: 20%; font-size: 20px; ">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere possimus officia aspernatur? Quas harum at excepturi odit. Eligendi maxime tempore, laborum neque illo quaerat debitis explicabo, in non perferendis qui.
+
+      </h2>
+        <img src="" alt="">
+    </section>
+</body>
+</html>
+
+
+
+

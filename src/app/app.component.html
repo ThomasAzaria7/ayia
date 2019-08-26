@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  -->
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">   
+<!--  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+<body>
+    <div *ngIf="!loaded">
+
+                <div class="loadingContainer" >
+                    <div class="loadingLogo" >
+                            <img  style="" width="100px" src="https://cdn.pixabay.com/photo/2014/04/03/10/26/branch-310432_1280.png" alt="">
+                            <h1 >AYIA.com.au</h1>
+                    </div>
+                </div>
+    </div>
+
+
+    <div *ngIf="home">
+            <i *ngIf="admin" style="position: absolute; left: 0vw; top: 10%; z-index: 16; font-size: 30px" (click)="close()" class="fas fa-window-close"></i>
+            <app-comingSoonPage></app-comingSoonPage>
+    </div>
+ 
+    <div *ngIf="navigate">
+        <app-navigation></app-navigation>
+        <div class="outerModal" *ngIf="showModal"  >
+                <div class="modalInner ">
+                      <p >
+                          #AYIASKINCARE HELLOW BEAUTIFUL, WANT 15% OFF PLUS FREE SHIPPING? JOIN OUR MAILING LIST
+                      </p> 
+                      <input class="form-control" type="email" placeholder="email" #email>
+                      <br>
+                      <button class="form-control btn btn-success btn-sm" (click)="SubscribeNow(email)">Subscribe!!</button>
+                      <br>
+                      
+                        <button (click)="closeModal()">close</button>
+                </div>
+            </div> 
+            <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
+</body>
+</html>
+
+
+
+
+

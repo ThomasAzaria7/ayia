@@ -1,0 +1,48 @@
+input{
+    margin: 10px 0;
+}
+
+
+/* mobile phone */
+@media(max-width:500px){
+    .comingSoonContainer{
+        position: fixed;
+        z-index:15; 
+        /* left: 60vw;  */
+        top:10%; 
+        width: 100vw;  
+        background-color: rgba(255, 255, 255, 0.158); 
+        padding: 20px
+    }
+    .loginComingSoonPage{
+        width: 80vw;
+        padding: 50px
+    }
+}
+/* tablets */
+@media(min-width:426px) and (max-width:768px){
+    .comingSoonContainer{
+        position: fixed;
+        z-index:15; 
+        left: 10vw; 
+        margin: 50px;
+        top:10%; 
+        width:65vw;  
+        background-color: rgba(255, 255, 255, 0.158); 
+        padding: 20px
+    }
+    .loginComingSoonPage{
+        width: 70vw;
+        padding: 50px
+    }
+}
+/* laptops and beyonf */
+@media(min-width:769px){
+    .comingSoonContainer{
+        position: fixed;z-index:15; left: 55vw; top:10%; width: 35vw;  background-color: rgba(255, 255, 255, 0.158); ;padding: 50px
+    }
+    .loginComingSoonPage{
+        width: 70vw;
+        padding: 50px
+    }
+}

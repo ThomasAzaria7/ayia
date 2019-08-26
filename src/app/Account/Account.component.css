@@ -1,0 +1,22 @@
+/* mobile phone */
+@media(max-width:500px){}
+/* tablets */
+@media(min-width:426px) and (max-width:768px){}
+/* laptops and beyond */
+@media(min-width:769px){
+    .signUp{
+        position: relative;
+        border: 2px solid rgba(202, 23, 23, 0.24);
+        background-color: white;
+        top: 5%;
+        left: 50vw;
+        width: 500px;
+        height: 80vh;
+        padding: 10px 5%;
+    }
+    
+    input{
+        position: relative;
+        margin-bottom: 5px;
+    }
+}

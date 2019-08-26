@@ -1,0 +1,134 @@
+
+
+body{
+  /* first background layer entire appliaction */
+    background-color: rgb(0, 0, 0);  
+}
+
+.loadingContainer{
+  height: 100vh; 
+  background-color:rgb(255, 255, 255) ;
+}
+
+.loadingLogo {
+  display: grid;
+  grid-template-columns: auto auto; 
+  grid-gap: 20px;
+  position: relative;
+  top: 35vh; 
+  justify-content: center
+}
+
+h1{
+  font-family: 'Righteous', cursive;
+  opacity:1;  
+  animation: flickerAnimation 3s infinite;
+}
+
+.loadingLogo h1{
+
+}
+
+.loadingLogo img{
+
+}
+
+@keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+
+/* mobile phone */
+@media(max-width:500px){
+  .modalInner{
+      position: relative;
+      top: 20vh;
+      margin-left: 20px;
+      height: 50vh; 
+      padding: 20px; 
+      background-color: rgb(255, 255, 255); 
+      width: 90vw; 
+
+  }
+  .outerModal{
+      height: 120vh; 
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.548); 
+      z-index: 15 ; 
+      width: 100vw; 
+      margin-top: -100px
+  }
+}
+/* tablets */
+@media(min-width:426px) and (max-width:768px){
+  .modalInner{
+      position: relative;
+      top: 20vh;
+      margin-left: 20px;
+      height: 50vh; 
+      padding: 20px; 
+      background-color: rgb(255, 255, 255); 
+      width: 60vw; 
+      left: 20vw;
+
+  }
+  .outerModal{
+      height: 120vh; 
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.548); 
+      z-index: 15 ; 
+      width: 100%; 
+      margin-top: -100px
+  }
+}
+/* laptops and beyonf */
+@media(min-width:769px){
+  body{
+      background-color: rgb(247, 247, 247);
+      animation: example 600 ;
+
+  }
+
+  .slideShowSection{
+      position: relative;
+      /* top: 5vh; */
+      background-color: rgb(197, 171, 54);
+      padding: 0 0%;
+      animation: example 1s ease;
+
+
+  }
+
+ 
+
+  .innerSlideshow{ 
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      height: 90vh;   
+  }
+
+  .modalInner{
+      position: relative;
+      left: 15%;
+      height: 50vh; 
+      margin: 50px;
+      padding: 50px; 
+      background-color: rgb(255, 255, 255); 
+      width: 60vw; 
+      animation: example 1s ease;
+
+
+  }
+  .outerModal{
+      height: 120vh; 
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.548); 
+      z-index: 15 ; 
+      width: 100%; 
+      margin-top: -100px;
+      animation: example 1s ease;
+
+  }
+}

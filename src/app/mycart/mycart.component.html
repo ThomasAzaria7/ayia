@@ -1,0 +1,56 @@
+<div class="checkoutContainer" >
+
+        <div class="categoryHeader">
+                <p>item</p>
+                <p>name</p>
+                <p>amount</p>
+                <p>cost</p>
+                <p>Paynow</p>
+                <p>remove</p>
+        </div>
+                <hr>
+
+        <div *ngFor="let item of arrItems ; let i =index" >
+                <div class="itemOutput">
+                        <img width="50px" [src]="item.displayImg" alt="">
+                        <p class="name">{{item.name}}</p>
+                        <!-- <p>{{item.describtion}}</p> -->
+                        <p class="quantity"> <span class="quantityDesc">items: </span>{{item.quantity}}</p>
+                        <p class="cost"> <span class="priceDesc">Price:</span> ${{item.price}}</p>
+                        <p class="buyNow">  pay now</p>
+                        <i (click)="removeProduct(i)" class="fas fa-trash-alt"></i>
+                <hr >
+                </div>
+
+                <div class="itemOutputMobile" >
+                                <img width="50px" [src]="item.displayImg" alt="">
+                               <div class="myDesc">
+                                        <p class="name">{{item.name}}</p>
+                                        <p class="quantity"> <span class="quantityDesc">items: </span>{{item.quantity}}</p>
+                                        <p class="cost"> <span class="priceDesc">Price:</span> ${{item.price}}</p>
+                                        <p class="buyNow">  pay now</p>
+                               </div>
+                               
+                                <i (click)="removeProduct(i)" class="fas fa-trash-alt"></i>
+                        <hr >
+                </div>
+        </div> 
+
+            <hr>
+        <div class="checkOut">
+                <p>   
+                Total Price <span class="priceTag"> ${{totalCost}}  </span> <span class="currency">{{currency}}</span>
+                </p>
+                <div class="paypalButton">
+                                <ngx-paypal class="button" [config]="payPalConfig"></ngx-paypal>
+                </div> 
+        </div>
+          
+
+
+
+</div>
+
+
+
+

@@ -1,0 +1,31 @@
+<div style="height: 100vh; background-color: beige">
+
+  
+
+
+    <div class="signUp">
+        <h4 style="color: rgb(207, 69, 51); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">AYIA - Register For An Account</h4>
+        <hr>
+        <br>
+        <form [formGroup]="signupForm">
+
+            <!-- <label for="name" >First Name</label> -->
+            <input placeholder="first Name" type="text" formControlName="firstName" class="form-control">
+            <input placeholder="Last Name" type="text" formControlName="lastName" class="form-control">
+            <input placeholder="email address" type="text" formControlName="email" class="form-control">
+            <input placeholder="password" type="password" formControlName="password" class="form-control">
+            <input placeholder="Confirm password" type="password" formControlName="confirmPassword" class="form-control">
+            
+            <!-- <input type="text" formControlName="name" class="form-control"> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit" (click)="signupNow()" class="form-control">Sign Up</button>
+            <p>{{passwordErr}}</p>
+        </form>
+    </div>
+
+
+</div>

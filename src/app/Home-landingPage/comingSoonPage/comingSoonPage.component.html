@@ -1,0 +1,63 @@
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+<div style="height: 100vh; ">
+
+<div style=" height: 100%; background-image: url('https://images.pexels.com/photos/1696735/pexels-photo-1696735.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size: cover">
+    
+      
+
+
+    <div *ngIf="!seekAccess" class="comingSoonContainer" >
+        <h1 style=" ">#AyiaSkinCare </h1>
+        <!-- <h2 style="text-align: center;  padding: 2%; font-family: 'Shadows Into Light', cursive;  font-size: 3.5em">  COMING SOON</h2> -->
+       <hr>
+        <!-- <input type="text" placeholder="name" class="form-control"> -->
+        <p style="font-size: 18px; ">
+            our website is <strong>coming soon</strong> , follow us for update now!
+        </p>
+        <!-- <input type="text" placeholder="lastName" class="form-control"> -->
+              <form [formGroup]="cominSoonForm">
+                  <div *ngIf='input'>
+                        <input formControlName="email"  type="email"  placeholder="Enter email address here" class="form-control" > 
+
+                  </div>
+                   <!--  -->
+                    <p class="help-block" style="color:red">{{err}}</p>
+                    <button *ngIf='input'  type="submit" (click)="Subscribe()" style="background-color: rgb(30, 134, 39); color: rgb(255, 255, 255)" class="form-control">GET NOTIFIED</button>
+                    <button *ngIf='!input' style="background-color: rgb(228, 240, 58); color: rgb(0, 0, 0)" class="form-control">Thank You, we'll keeep in touch</button>
+                    
+              </form>
+        
+        
+
+       
+         
+    </div>
+
+        <div >
+                <i style="opacity: 0.5;" (click)="grantAccess()" class="fas fa-unlock-alt"></i>
+            <div *ngIf="seekAccess" class="loginComingSoonPage">
+                    <input class="form-control" type="text" placeholder="email" #email style="margin-bottom: 5px;">
+                    <input class="form-control" type="password" placeholder="password" #password>
+                    <br>
+                  
+                    <button class="form-control" (click)="signIn(email, password)">Log In</button>
+                    <br>
+                    <div *ngIf="loginErr" style="background-color: white; padding: 10px 10%">
+                            <p class="help-block" style="color:red">{{loginErr}}</p>
+                    </div>
+
+            </div>
+            
+        </div>
+
+
+
+
+</div>
+
+
+    
+
+</div>

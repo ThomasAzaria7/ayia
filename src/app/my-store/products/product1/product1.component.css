@@ -1,0 +1,103 @@
+/* mobile phone */
+@media(max-width:500px){
+    .main-products{
+        width: 100%;
+        position: relative;
+        left: 4vw;
+        /* top: 8%; */
+        animation-name: example;
+        animation-duration: 2s;
+        z-index: 0;
+        margin-bottom: 50px;
+        /* display: none; */
+    }
+
+
+ 
+    img{
+        object-fit: contain;
+
+    }
+
+
+
+    @keyframes example {
+        0%   {opacity: 0}
+        25%  {opacity: 0.25}
+        50%  {opacity: 0.5}
+        75%  {opacity: 0.75}
+        100% {opacity: 1}
+      }
+}
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* tablets */
+@media(min-width:426px) and (max-width:768px){
+    .main-products{
+        padding: 30px 5vw;
+        width: 100%;
+        position: relative;
+        top: 8%;
+        animation-name: example;
+        animation-duration: 2s;
+    }
+
+    
+
+
+
+ 
+    img{
+        object-fit: contain;
+    }
+  
+    .selection{
+        border-right: solid 1px black
+    }
+
+
+
+    @keyframes example {
+        0%   {opacity: 0}
+        25%  {opacity: 0.25}
+        50%  {opacity: 0.5}
+        75%  {opacity: 0.75}
+        100% {opacity: 1}
+      }
+}
+
+/*  */
+/*  */
+/*  */
+
+/* laptops and beyonf */
+@media(min-width:769px){
+    .main-products{
+        padding: 0 5%;
+        width: 100%;
+        position: relative;
+        /* top: 8%; */
+        animation-name: example;
+        animation-duration: 2s;
+    }
+
+    
+
+
+
+
+body{
+    background-color: rgba(255, 255, 255, 0.336);
+}
+
+    @keyframes example {
+        0%   {opacity: 0}
+        25%  {opacity: 0.25}
+        50%  {opacity: 0.5}
+        75%  {opacity: 0.75}
+        100% {opacity: 1}
+      }
+}

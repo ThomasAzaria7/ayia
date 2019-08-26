@@ -1,0 +1,20 @@
+/* mobile phone */
+@media(max-width:500px){
+    .myAbout{
+        padding: 5%
+    }
+}
+/* tablets */
+@media(min-width:426px) and (max-width:768px){
+    .myAbout{
+        padding: 5%
+    }
+}
+/* laptops and beyonf */
+@media(min-width:769px){
+    .myAbout{
+        padding: 5%
+    }
+}
+
+

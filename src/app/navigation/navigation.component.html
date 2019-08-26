@@ -1,0 +1,74 @@
+<link href="https://fonts.googleapis.com/css?family=Dokdo|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<div class="accountDetails" style="">
+    <!-- <p>50 % off all products sale now</p> -->
+</div>
+<!--  -->
+
+<div class="navContainer">
+    <ul  class="topNav" >
+        <!-- tab/phone -->
+        <div class="bar">
+                <div *ngIf="showNav">
+                        <i (click)="toggle()" class="fas fa-times"></i>
+                </div>
+                <div *ngIf="!showNav">
+                        <i   (click)="toggle()" class="fas fa-bars"></i>
+                </div>
+        </div>
+        <!-- tab/phone -->
+        <div class="logo">
+            <li><a routerLink="">AYIA</a> </li> 
+        </div>
+        <div class="bag">  
+                 <li ><i class="far fa-heart"></i></li>
+                 <li><a routerLink="checkout"><i class="fas fa-shopping-bag"> <span> ({{ cartNumber }})</span></i></a></li>
+        </div>
+        <!--  -->
+        <!-- desktop -->
+        <div class="nav">
+                <li ><a routerLink="">Home</a></li>
+                <li ><a routerLink="online-store/shop">Shop</a></li>
+                <li ><a routerLink="about-us">Our Story</a></li>
+        </div>
+        <!--  -->
+        <div class="user">
+                <li *ngIf="!auth" ><a routerLink="login">sign in /register</a></li>
+                <li *ngIf="auth"><i routerLink="user_account"    class="fas fa-user-circle "> </i></li>
+                <li ><i class="far fa-heart"></i></li>
+                <li routerLink="checkout" class="cart"><a ><img width="35px" src="assets/cart.svg" alt=""><span style="color: rgb(0, 0, 0); font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif"> ( {{ cartNumber }} items) </span></a></li>
+                        <!-- <i   class="fas fa-user-circle "> <span *ngIf="displayName" style="font-size: 10px; position: relative; left: 2px; font-family: sans-serif; font-weight: 5">{{displayName}}</span></i> -->
+                <!-- <div id="myDropdown" class="dropdown-content">
+                <a routerLink="admin/productManagement">admin</a>
+                <a routerLink="login">sign in</a>
+                <a  routerLink="user_account">My account</a>
+                <a (click)="logout()">logout <i class="fas fa-sign-out-alt"></i></a> -->
+        </div>
+    </ul>
+
+</div>
+<!--  -->
+
+<div>
+        <ul   class="navIphone" [@openClose]="isOpen ? 'open' : 'closed'">
+                <li (click)="toggle()" ><a routerLink="">Home</a></li>
+                <li (click)="toggle()"><a routerLink="online-store/shop">Shop</a></li>
+                <li (click)="toggle()"><a routerLink="about-us">Our Story</a></li>
+                <li (click)="toggle()" class="cart" ><a routerLink="checkout"> CART  <i class="fas fa-shopping-cart"> <span> ({{cartNumber}}) </span> </i> </a></li>  
+                <!-- <li  style="position: relative; top: 16px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 12px; margin: 0 20px;">
+                    <select  (click)="currentCurrency(value)" #value >
+                            <option value="USD">USD</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CLP">CLP</option>
+                            <option value="DZD">DZD</option>
+                          </select>
+        
+                          ${{convertedMoney}}
+                </li> -->
+        </ul>
+</div>
+
+
+<p>hi </p>
