@@ -50,7 +50,7 @@ export class ComingSoonPageComponent implements OnInit {
               if(this.myEmails ){
                 let  result=  this.myEmails.subscribers.find((x)=> x == data)
                 if(!result){
-                  this.myEmails.subscribers.push(data)
+                  this.myEmails.subscribers.unshift(data)
                 }
                 this.err=''
               }else{

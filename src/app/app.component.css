@@ -42,16 +42,27 @@ h1{
 
 /* mobile phone */
 @media(max-width:500px){
-  .modalInner{
-      position: relative;
-      top: 20vh;
-      margin-left: 20px;
-      height: 50vh; 
-      padding: 20px; 
-      background-color: rgb(255, 255, 255); 
-      width: 90vw; 
-
-  }
+    .modalInner{
+        position: relative;
+        /* left: 2%; */
+        top: 10%;
+        height: 80vh; 
+        margin: 0px;
+        padding: 10px; 
+        background-color: rgb(255, 255, 255); 
+        width: 100vw; 
+        animation: example 1s ease;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-gap: 10px;
+  
+  
+    }
+    .Modalcontent i{
+      position: absolute;
+      top:20px;
+      right: 10px;
+    }
   .outerModal{
       height: 120vh; 
       position: fixed;
@@ -65,14 +76,24 @@ h1{
 @media(min-width:426px) and (max-width:768px){
   .modalInner{
       position: relative;
-      top: 20vh;
-      margin-left: 20px;
-      height: 50vh; 
-      padding: 20px; 
+      left: 15%;
+      top: 10%;
+      height: 60vh; 
+      margin: 50px;
+      padding: 50px; 
       background-color: rgb(255, 255, 255); 
       width: 60vw; 
-      left: 20vw;
+      animation: example 1s ease;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
 
+
+  }
+  .Modalcontent i{
+    position: absolute;
+    top:20px;
+    right: 10px;
   }
   .outerModal{
       height: 120vh; 
@@ -111,15 +132,23 @@ h1{
 
   .modalInner{
       position: relative;
-      left: 15%;
-      height: 50vh; 
+      left: 20%;
+      height: 60vh; 
       margin: 50px;
       padding: 50px; 
       background-color: rgb(255, 255, 255); 
-      width: 60vw; 
+      width: 50vw; 
       animation: example 1s ease;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
 
 
+  }
+  .Modalcontent i{
+    position: absolute;
+    top:20px;
+    right: 15px;
   }
   .outerModal{
       height: 120vh; 

@@ -1,0 +1,39 @@
+/* mobile phone */
+@media(max-width:500px){}
+/* tablets */
+@media(min-width:426px) and (max-width:768px){}
+/* laptops and beyonf */
+@media(min-width:769px){
+    .innerContainer{
+        position: relative;
+        top: 2vh;
+    }
+    .innerContainer h2{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.5em;
+    }
+
+    .innerContainer h3{
+        font-family: sans-serif;
+        font-size: 1em;
+        margin: 10px
+    }
+
+    .alert{
+        position: absolute;
+        top: 20vh;
+        width: 50vw;
+        height: 50vh;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.253)
+    
+    }
+    .alertInner{
+        background-color: white;
+        position: relative;
+        margin: 10%;
+        padding: 5%
+    }
+
+
+}

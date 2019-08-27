@@ -130,7 +130,8 @@
         position: relative;
         /* background-color: rgba(157, 255, 170, 0.164); */
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 50% auto;
+        /* grid-gap: 100px; */
         border-bottom: solid 2px rgb(194, 194, 194);
         padding: 0 5%;
         margin: 50px 4%;
@@ -159,9 +160,16 @@
     padding: 8px 16px;
     text-align: center;
     text-decoration: none;
-    background-color: rgb(151, 122, 98);
+    background-color: rgba(201, 200, 200, 0.404);
+    width: 10vw;
+
+
+
+
+
+    
     margin: 2px;
-    float: left;
+    float: right;
     }
     
     /* Change the link color on hover */
@@ -175,7 +183,7 @@
         left: 10%;
         top: 5px;
         font-size: 20px;
-        width: 500px;
+        width: auto;
         background-color: rgba(255, 255, 255, 0.219);
         color: rgb(0, 54, 41);
         padding: 10px 20px;

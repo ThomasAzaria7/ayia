@@ -31,16 +31,25 @@
         <app-navigation></app-navigation>
         <div class="outerModal" *ngIf="showModal"  >
                 <div class="modalInner ">
-                      <p >
-                          #AYIASKINCARE HELLOW BEAUTIFUL, WANT 15% OFF PLUS FREE SHIPPING? JOIN OUR MAILING LIST
-                      </p> 
-                      <input class="form-control" type="email" placeholder="email" #email>
-                      <br>
-                      <button class="form-control btn btn-success btn-sm" (click)="SubscribeNow(email)">Subscribe!!</button>
-                      <br>
-                      
-                        <button (click)="closeModal()">close</button>
+                    <div class="Modalcontent">
+                        <p >
+                            #AYIASKINCARE 
+                        </p> 
+                        <p>
+                                HELLO BEAUTIFUL, WANT 15% OFF PLUS FREE SHIPPING? JOIN OUR MAILING LIST
+                        </p>
+                        <input class="form-control" type="email" placeholder="email" #email>
+                        <br>
+                        <button class="form-control btn btn-success btn-sm" (click)="SubscribeNow(email)">Subscribe!!</button>
+                        <br>
+                        <i (click)="closeModal()" class="far fa-window-close"></i>
+                    </div>
+                    <!--  -->
+                    <div>
+                            <img style="object-fit: cover" width="100%" height="100%" src="https://images.pexels.com/photos/2821823/pexels-photo-2821823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    </div>
                 </div>
+               
             </div> 
             <router-outlet></router-outlet>
         <app-footer></app-footer>

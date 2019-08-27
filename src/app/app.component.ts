@@ -46,12 +46,18 @@ export class AppComponent implements OnInit {
   db=firestore()
   //
 
-  loaded=false;
-  home=false;
-  // loaded=true;
-  // home=false;
+  //on production 
+    // loaded=false; // 
+    // home=false;
+    // navigate=false
 
-  navigate=false
+
+  //  testing
+    loaded=true;
+    home=false;
+    navigate=true
+
+
   admin
   showModal=false
 
@@ -77,7 +83,7 @@ export class AppComponent implements OnInit {
 
     setTimeout(()=>{
       this.loaded=true  //on production
-      this.home=true;  // on production 
+      // this.home=true;  // on production 
 
 
       // this.home=false;
@@ -90,7 +96,7 @@ export class AppComponent implements OnInit {
   
     setTimeout(()=>{
       this.showModal=true
-     },60000) //2 mins ==120000
+     },1000) //2 mins ==120000
 
 
   }

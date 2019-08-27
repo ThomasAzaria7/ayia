@@ -1,13 +1,45 @@
 
-<div style="height: 100vh;">
-    <h2>list of subsscriber emails</h2>
-    <hr>
+<div  class="outerContainer">
 
-    <div *ngFor="let item of myEmails">
-        <h2>{{item}}</h2>
+    <div class="innerContainer">
+
+         <h2  >list of subsscriber emails</h2> 
+        <hr>
+
+        <div *ngFor="let item of myEmails; let i=index" style="display: grid;grid-template-columns: 20% auto; justify-content:space-around">
+            <h3 >{{item}}</h3>
+            <i *ngIf="!hideCLose" (click)="removeEmail(i)" class="far fa-times-circle"></i>
+
+        </div>
+
+      
     </div>
+
     
 </div>
 
+<div class="alert"  *ngIf="confirm">
+        <div class="alertInner">
+                <P>Are you sure you want to delete " {{deleteEmail}} "</P>
+                <div style="display: grid;grid-template-columns: 20% 20%;">
+                       <button (click)="restart()">  <p >No</p>  </button>  
+                     <button (click)="delete()"> <p >yes</p> </button>
+                         
+
+                </div>
+        </div>
+    
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
