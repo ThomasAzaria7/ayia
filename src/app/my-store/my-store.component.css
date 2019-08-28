@@ -134,7 +134,7 @@
         /* grid-gap: 100px; */
         border-bottom: solid 2px rgb(194, 194, 194);
         padding: 0 5%;
-        margin: 50px 4%;
+        margin: 50px 1.3%;
     }
     .add_gap ul{
         margin: 5% 0;
@@ -147,39 +147,30 @@
     list-style-type: none;
     padding: 0 ;
     width: 100%;
-    /* width: 100%; */
-    /* background-color: #ffffff; */
     position: relative;
-    /* top: 4.2%; */
-    /* height: 85vh; */
     }
     
     .add_gap li a {
     display: block;
-    color: #000;
+    color: rgb(255, 255, 255);
     padding: 8px 16px;
     text-align: center;
     text-decoration: none;
-    background-color: rgba(201, 200, 200, 0.404);
+    background: rgb(0, 0, 0);
     width: 10vw;
-
-
-
-
-
-    
-    margin: 2px;
+    margin: 2px; 
     float: right;
     }
     
     /* Change the link color on hover */
     .add_gap li a:hover {
-    background-color: rgb(151, 122, 98);
+     
     color: white;
     }
 
     .add_gap h1{
         position: relative;
+        font-family: 'Hepta Slab', serif;
         left: 10%;
         top: 5px;
         font-size: 20px;
@@ -187,9 +178,10 @@
         background-color: rgba(255, 255, 255, 0.219);
         color: rgb(0, 54, 41);
         padding: 10px 20px;
-        font-family:sans-serif;
+        /* font-family:sans-serif; */
 
 
 
     }
+    
 }

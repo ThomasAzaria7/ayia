@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,15 +9,17 @@
 </head>
 <body>
   
-    <div   style="position: relative;"  style="">
+    <div   style="position: relative;"  >
         <section class="main-products row">
     
                     
                   <div class="describtion" *ngFor="let item of items; let i =index" class=" col-sm-4 col-lg-3" >
            
-                      <div (click)="ProductPreview(i)"   style="width: 100%; height: 40vh; border: solid 1px black; background-color: white; margin: 15px 0" >
-                        <img  style="object-fit: contain; padding: 30px"  width="100%" height="100%" [src]="item.displayImg" alt="">
-                            <p> {{  item.name  }}</p>
+                      <div class="productOutput " (click)="ProductPreview(i)"  >
+                        <img    width="100%" height="90%" [src]="item.displayImg" alt="">
+                            <p class="name"> {{  item.name  }}</p>
+                            <p class="price"> ${{  item.price.toFixed(2)  }}</p>
+                            <button class="cart btn-sm">cart</button>
                       </div>
                  
                 </div>

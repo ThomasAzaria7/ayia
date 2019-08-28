@@ -42,6 +42,8 @@ import { CustomCarouselComponent } from './Home-landingPage/CustomCarousel/Custo
 import { ComingSoonPageComponent } from './Home-landingPage/comingSoonPage/comingSoonPage.component';
 import { ProductsPreviewComponent } from './my-store/products/ProductsPreview/ProductsPreview.component';
 import { Template1Component } from './A-templates/template1/template1.component';
+import { FormsModule } from '@angular/forms';
+
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyBU4tXjVTIbHlpsWWYFYe-o-5mXiuhMGA8",
@@ -85,6 +87,7 @@ import { Template1Component } from './A-templates/template1/template1.component'
       AppRoutingModule,
       HttpClientModule,
       ReactiveFormsModule,
+      FormsModule,
       SlideshowModule,
       NgxPayPalModule,
       NgxCurrencyModule,

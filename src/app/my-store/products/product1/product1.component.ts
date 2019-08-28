@@ -21,6 +21,7 @@ export class Product1Component implements OnInit {
         this.productStore.pipe(select('ProductState')).subscribe(
           val=>{
               this.items=val.items
+              
           }
         )
   }

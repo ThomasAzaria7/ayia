@@ -35,19 +35,6 @@ export class MycartComponent implements OnInit {
   checkoutItems= [
 
   ]
-  
-      
-    //   [{
-    //     name: 'product',
-        
-    //     currency: 'AUD',
-    //     price:50 ,
-    //     quantity: 1,
-    //     description: 'test product',
-    //     tax: 0,
-    //     sku: '',
-        
-    // }]
 
   scoreboard: Observable<any[]>;
   items: any;
@@ -68,12 +55,8 @@ export class MycartComponent implements OnInit {
 
 
   ngOnInit() {
-    this.addToCheckout()
-
     console.log(this.arrItems);
     
-
-
   }
 
   removeProduct(i){
@@ -81,12 +64,16 @@ export class MycartComponent implements OnInit {
 
 
     this.arrItems.splice(i,1)
+    this.checkoutItems.splice(i,1)
+
 
     localStorage.setItem('cart', JSON.stringify(this.arrItems))
     this.store.dispatch(new actions.addItem)
-    this.getTotal()
+    // this.getTotal()
 
-    this.addToCheckout()
+    // this.addToCheckout()
+
+    this.initConfig();
 
 
 
@@ -143,7 +130,7 @@ export class MycartComponent implements OnInit {
           `
     };
   
-      //
+      // 
 
       // this.http.get(data.returnUrl).subscribe(val => console.log(val))
     // this.http.post('https://ayia.herokuapp.com/send/recipt',mailOptions).subscribe()

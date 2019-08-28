@@ -23,17 +23,17 @@
             <img (click)="changePic(2)" [src]="imageUrlArray[2]"   alt="">
             <img (click)="changePic(3)" [src]="imageUrlArray[3]"   alt="">
        </div>
-
-        <div  class="productDiscription"> 
+        <!--  -->
+        <div  class="productDiscription">  
             <h1>{{currentProduct.name}}</h1>
             <hr>
             <h4>Product Description</h4>
             <p> {{currentProduct.description}}</p>
             <div class="myButtons">
-                <p  class="price"> ${{currentProduct.price}}</p>
+                <p  class="price"> ${{currentProduct.price.toFixed(2)}}</p>
                 <div class="cartbutton">
-                    <i *ngIf="!added" (click)="buyItem1()" class="fas fa-shopping-cart"><span>add</span></i>
-                    <p *ngIf="added" routerLink="/checkout">Added!</p>
+                    <i *ngIf="!added" (click)="buyItem1()" class="fas fa-shopping-cart"><span style="font-family:'Hepta Slab', serif; "> Add to cart</span></i>
+                 <button *ngIf="added" routerLink="/checkout" class="btn-sm" style="font-family:'Hepta Slab', serif; background-color: black; color: white ">Added to Cart</button>
                 </div>
                 
                  <!-- <i class="fas fa-heart"><span style="color: black; font-size: 12px"> Wishlist</span></i> -->

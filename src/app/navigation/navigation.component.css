@@ -28,7 +28,8 @@ li a {
     padding: 0px 20px;
     text-decoration: none;
     font-size: 1.1em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: 'Hepta Slab', serif;
     position: relative;
 }
 li a:hover {
@@ -198,7 +199,8 @@ li a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 1.1em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Hepta Slab', serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     position: relative;
     top: 5px;
 }
@@ -386,7 +388,8 @@ li a:hover {
         text-decoration: none;
         /* font-size: 1.1em; */
         /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif */
-        font-family: 'Playfair Display', serif;
+        /* font-family: 'Playfair Display', serif; */
+        font-family: 'Hepta Slab', serif;
 
     }
 

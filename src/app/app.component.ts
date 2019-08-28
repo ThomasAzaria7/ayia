@@ -96,7 +96,7 @@ export class AppComponent implements OnInit {
   
     setTimeout(()=>{
       this.showModal=true
-     },1000) //2 mins ==120000
+     },60000) //2 mins ==120000
 
 
   }

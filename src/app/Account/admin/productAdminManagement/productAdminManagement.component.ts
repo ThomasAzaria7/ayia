@@ -14,7 +14,16 @@ import { AyiaProduct } from '../../../my-store/products/productModel';
 export class ProductAdminManagementComponent implements OnInit {
   products:AyiaProduct  // model
   items
+  editData
+  edit =false;
    db=firestore()
+
+   //
+  nameEdit ='value'
+  itemIndex
+  newPrice:number=0
+
+   //
 
 
 
@@ -38,6 +47,7 @@ export class ProductAdminManagementComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     // this.productStore.pipe(select('ProductState')).subscribe(
     //   val=>{
     //     console.log(val);
@@ -56,12 +66,16 @@ export class ProductAdminManagementComponent implements OnInit {
 
     let productsObj
 
+    let productprice=this.addItem.value.cost.toFixed(2)
+    console.log(productprice);
+    
+
     let title = this.addItem.value.name;
     let productDes=this.addItem.value.desc;
     let displayImg=this.addItem.value.pic;
     // const otherImgs=this.addItem.value.name;
     let productCode= this.makeid(6);
-    const cost=this.addItem.value.cost;
+    const cost=productprice;
     const quantity=1;
     // const price=this.addItem.value.name;
     // const currency=this.addItem.value.name;
@@ -77,7 +91,7 @@ export class ProductAdminManagementComponent implements OnInit {
       code: productCode,
       cost:cost,
       quantity: quantity,
-      price :cost * quantity,
+      price :cost,
       currency :'AUD',
       tax :'tax',
       
@@ -111,6 +125,71 @@ export class ProductAdminManagementComponent implements OnInit {
 
   }
 
+  deleteItem(i){
+
+    this.items.splice(i,1)
+    this.db.collection('AyiaProducts').doc('/items').set({items:this.items})
+  
+  }
+
+  editItem(i){
+    this.itemIndex=i
+   this.editData= this.items.splice(i,1)
+    this.editData=this.editData[0]
+    this.nameEdit=this.editData.name
+
+    console.log(this.editData);
+    this.edit=true;
+    
+    // this.addItem.value.name= this.editData.name
+    
+
+  }
+
+  saveEdit(name,desc,img,price,position){
+    console.log(name.value);
+
+    let cost =parseInt( price.value).toFixed(2)
+
+    console.log(cost);
+
+    console.log(this.newPrice);
+    
+    
+
+
+
+    this.products = {
+      name : name.value ,
+      description:desc.value,
+      displayImg:img.value,
+      otherImgs:[''],
+      code: this.makeid(6),
+      cost:price.value,
+      quantity: 1,
+      price :this.newPrice,
+      currency :'AUD',
+      tax :'tax',
+      
+    }
+
+    const i= position.value -1
+
+    console.log(i);
+    
+
+    if(i !=-1){
+      this.items.splice(i,0,this.products)
+
+    }else{
+      this.items.splice(this.itemIndex,0,this.products)
+
+    }
+    this.db.collection('AyiaProducts').doc('/items').set({items:this.items})
+    this.edit=false
+    
+  }
+ 
 
    makeid(length) {
     var result           = '';

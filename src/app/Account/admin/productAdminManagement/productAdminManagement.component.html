@@ -1,22 +1,17 @@
 
-<div >
-    <br>
-    <button class="btn btn-primary">add a product</button>
-    <button class="btn btn-success">update a product</button>
-    <button class="btn btn-danger">delete a product</button>
-</div>
+
 
 
 <div> 
     <form [formGroup]="addItem" >
       
-        <div style="position: relative; top: 10vh; padding: 0 0vw; width: 20vw">
+        <div *ngIf="!edit" style="position: relative; top: 10vh; padding: 0 0vw; width: 20vw">
            
     
             <input type="text" placeholder="product name"  class="form-control" formControlName="name">
             <input type="text" placeholder="describtion"  class="form-control" formControlName="desc">
             <input type="text" placeholder="copy image address"  class="form-control" formControlName="pic">
-            <input type="text" placeholder="price"  class="form-control" formControlName="cost">
+            <input type="number" placeholder="price"  class="form-control" formControlName="cost">
             <!-- <input type="text" placeholder=""  class="form-control" formControlName=""> -->
             <!-- <input type="text" placeholder=""  class="form-control" formControlName=""> -->
             <!-- <input type="text" placeholder=""  class="form-control" formControlName=""> -->
@@ -26,6 +21,9 @@
     
      
         </div>
+
+        <!-- for editting -->
+  
     
      
       </form>
@@ -37,14 +35,33 @@
       <div style="position: relative; " *ngIf="items" style="padding: 0 5%">
           <h2>preview</h2>
             <hr>
-              <section class="main-products row">
+            <!-- for editing product items -->
+            <div *ngIf="edit" style="position: relative; top: 10vh; padding: 0 0vw; width: 20vw">
+           
+                    <input  [(ngModel)]="editData.name" type="text"   class="form-control" #name >
+                    <input  [(ngModel)]="editData.description" type="text" placeholder="hi"  class="form-control" #desc >
+                    <input  [(ngModel)]="editData.displayImg" type="text"   class="form-control" #img>
+                    <input type="number" [(ngModel)]="newPrice" class="form-control" #price >
+                    <label for="new position">new position</label>
+                    <input type="number" placeholder="" #position>
+                    <!-- <input  [(ngModel)]="" type="number" placeholder="price"  class="form-control"> -->
+                    <!-- <input type="text" placeholder=""  class="form-control" formControlName=""> -->
+                    <!-- <input type="text" placeholder=""  class="form-control" formControlName=""> -->
+                    <!-- <input type="text" placeholder=""  class="form-control" formControlName=""> -->
+                    <!-- <input type="text" placeholder=""  class="form-control" formControlName=""> -->
+              
+                    <button style="margin:0 10px;" class="form-control btn-primary" (click)="saveEdit(name,desc,img,price,position)" type="submit">saveEdit</button>
+             
+                </div>
+                <!--  -->
+              <section *ngIf="!edit"  class="main-products row">
           
                           
-                        <div class="describtion" *ngFor="let item of items" class="col-md-3" >
+                        <div class="describtion" *ngFor="let item of items; let i =index" class="col-md-3" >
                  
                             <div style="width: 100%; height: 40vh; border: solid 1px black; background-color: white; margin: 10px 0" >
-                            <i style="position: absolute; " class="fas fa-pen"></i>
-                               
+                            <i (click)="editItem(i)" style="position: absolute; " class="fas fa-pen"></i>
+                            <i (click)="deleteItem(i)" style="position: absolute; right: 2vw"  class="far fa-times-circle"></i>
                               <img  style="object-fit: contain; padding: 20px"  width="100%" height="100%" [src]="item.displayImg" alt="">
                                   <p> {{  item.name  }}</p>
                             </div>
@@ -53,7 +70,7 @@
                       
                     
              
-            </section>
+            </section> 
             
           </div>
 <br>
