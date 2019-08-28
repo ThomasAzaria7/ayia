@@ -85,15 +85,14 @@ export class AppComponent implements OnInit {
       this.loaded=true  //on production
       this.home=true;  // on production 
 
-
+      //for testing
       // this.home=false;
-        // this.navigate=true;  // on production 
 
-      //
     },2000) 
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+
+
   
+    // modal show for home
     setTimeout(()=>{
       this.showModal=true
      },60000) //2 mins ==120000
