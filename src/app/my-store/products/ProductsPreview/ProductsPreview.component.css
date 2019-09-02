@@ -133,6 +133,13 @@
 }
 /* laptops and beyonf */
 @media(min-width:769px){
+    .productDiscription h1 {
+        font-size: 25px
+    }
+    .productDiscription h4 {
+        font-size: 15px;
+        display :none;
+    }
     .productPreviewCOntainer{
         padding: 50px 5%;
         width: 100%;
@@ -157,7 +164,7 @@
   
     .section1{
         display: grid; 
-        grid-template-columns: 50% 6% auto;
+        grid-template-columns: 40% 6% 45%;
         grid-gap:10px;
     }
     .otherImgs{

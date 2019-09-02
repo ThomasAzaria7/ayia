@@ -12,7 +12,7 @@ export class AyiaProduct{
     public tax:string;
 
     constructor(title:string, productDes:string, displayImg:string, photo:[''],
-    productCode:string, cost:any,quantity:number,price:any, currency:string,tax:string){
+    productCode:string, cost:number,quantity:number,price:number, currency:string,tax:string){
         this.name = title;
         this.description=productDes;
         this.displayImg=displayImg;

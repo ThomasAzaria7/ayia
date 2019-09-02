@@ -34,7 +34,7 @@
         </div>
         <!--  -->
         <div class="user">
-                <li *ngIf="!auth" ><a routerLink="login">sign in /register</a></li>
+                <li *ngIf="!auth" ><a routerLink="login">SignIn</a></li>
                 <li *ngIf="auth"><i routerLink="user_account"    class="fas fa-user-circle "> </i></li>
                 <li ><i class="far fa-heart"></i></li>
                 <li routerLink="checkout" class="cart"><a ><img width="35px" src="assets/cart.svg" alt=""><span style="color: rgb(0, 0, 0); font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif"> ( {{ cartNumber }} items) </span></a></li>

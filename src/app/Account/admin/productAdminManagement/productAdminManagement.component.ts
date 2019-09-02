@@ -66,7 +66,7 @@ export class ProductAdminManagementComponent implements OnInit {
 
     let productsObj
 
-    let productprice=this.addItem.value.cost.toFixed(2)
+    let productprice:number=this.addItem.value.cost.toFixed(2)
     console.log(productprice);
     
 
@@ -75,7 +75,6 @@ export class ProductAdminManagementComponent implements OnInit {
     let displayImg=this.addItem.value.pic;
     // const otherImgs=this.addItem.value.name;
     let productCode= this.makeid(6);
-    const cost=productprice;
     const quantity=1;
     // const price=this.addItem.value.name;
     // const currency=this.addItem.value.name;
@@ -89,9 +88,9 @@ export class ProductAdminManagementComponent implements OnInit {
       displayImg:displayImg,
       otherImgs:[''],
       code: productCode,
-      cost:cost,
+      cost:productprice,
       quantity: quantity,
-      price :cost,
+      price :productprice,
       currency :'AUD',
       tax :'tax',
       
@@ -104,7 +103,7 @@ export class ProductAdminManagementComponent implements OnInit {
         items:[this.products]
       }
     }else{
-     this.items.push( this.products)
+     this.items.unshift( this.products)
       
      productsObj={
        items:this.items

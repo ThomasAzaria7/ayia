@@ -47,15 +47,15 @@ export class AppComponent implements OnInit {
   //
 
   //on production 
-    loaded=false; // 
-    home=false;
-    navigate=false
+    // loaded=false; // 
+    // home=false;
+    // navigate=false
 
 
   //  testing
-    // loaded=true;
-    // home=false;
-    // navigate=true
+    loaded=true;
+    home=false;
+    navigate=true
 
 
   admin
@@ -82,11 +82,11 @@ export class AppComponent implements OnInit {
       })
 
     setTimeout(()=>{
-      this.loaded=true  //on production
-      this.home=true;  // on production 
+      // this.loaded=true  //on production
+      // this.home=true;  // on production 
 
       //for testing
-      // this.home=false;
+      this.home=false;
 
     },2000) 
 

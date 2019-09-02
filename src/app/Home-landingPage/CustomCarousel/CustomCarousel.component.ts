@@ -19,8 +19,10 @@ export class CustomCarouselComponent implements OnInit, DoCheck {
     position:any;
   }
 
-  previous =0
-  current=0
+  steps=new Array(3).fill(false)
+  start = 0
+
+
   
   constructor() { 
   
@@ -36,8 +38,53 @@ export class CustomCarouselComponent implements OnInit, DoCheck {
 
   ngOnInit() { 
 
- 
+    this.steps[0]=true; 
 
+
+  }
+
+
+  next(){
+    const i=this.start
+
+    if(this.start <= 1){
+     this.start++
+      if(this.steps[i] == true){
+        this.steps[i]=false
+        this.steps[this.start]=true
+      }
+    }else{
+      this.start=0;
+
+      if(this.steps[i] == true){
+        this.steps[i]=false
+        this.steps[this.start]=true
+      }
+    }
+    
+    
+  
+  }
+  prev(){
+    const i=this.start
+
+    if(this.start >= 1){
+    this.start--
+      if(this.steps[i] == true){
+        this.steps[i]=false
+        this.steps[this.start]=true
+      }
+    }
+
+    else{
+      this.start=2;
+      
+      if(this.steps[i] == true){
+        this.steps[i]=false
+        this.steps[this.start]=true
+      }
+    }
+  
   }
 
 

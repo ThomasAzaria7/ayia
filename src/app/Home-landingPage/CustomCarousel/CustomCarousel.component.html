@@ -1,3 +1,44 @@
-  <div style="height: 100vh;">
-    <!-- <img [src]="imageSources[0]" alt=""> -->
+  <div style="height: 100vh; position: relative;">
+      <div *ngIf="steps[0]" style="" >
+          <img [ngClass]="['click']" width="100%" height="550px" style="object-fit: cover" src="https://firebasestorage.googleapis.com/v0/b/ayia-online.appspot.com/o/Home%2FAYIA9.jpg?alt=media&token=5952535b-0ad0-4c37-9d70-0fb03a444341" alt="">
+          <h2 [ngClass]="{'onChange': true}">
+            I listen to you more than you Know
+          </h2>
+          <p>
+             Impedit officia omnis earum repellat ipsam aliquam eius libero similique fugiat, recusandae quia consectetur perspiciatis adipisci facere minima saepe qui veritatis voluptatem!
+          <br>
+          <br>
+            <span><button class="btn btn-sm " style="color: black;background-color:white;" routerLink='online-store/k0TTFI'>BuyNow</button></span>
+          </p>
+        
+        </div>
+        <div *ngIf="steps[1]">
+          <img [ngClass]="['click']" width="100%" height="500px" style="object-fit: cover" src="https://images.pexels.com/photos/2828035/pexels-photo-2828035.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+ 
+          <h2 [ngClass]="{'onChange': true}">
+              I care about your happiness and wellbeing
+            </h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit officia omnis earum repellat ipsam aliquam eius libero similique fugiat, recusandae quia consectetur perspiciatis adipisci facere minima saepe qui veritatis voluptatem!
+            </p>
+        </div>
+        <div *ngIf="steps[2]">
+          <img [ngClass]="['click']" width="100%" height="500px" style="object-fit: cover" src="https://images.pexels.com/photos/1164674/pexels-photo-1164674.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+
+          <p> AYIA SkinCare         <span><button class="btn btn-sm " style="color: black;background-color:white; padding: 0 5px" routerLink='online-store/E2DgdP'>BuyNow</button></span></p>
+        </div>
+
+        <div style="position: absolute; top: 30%; right:10px; ">
+            <i class="click" style="font-size: 30px; color:ivory" (click)="next()" class="far fa-caret-square-right"></i>
+        </div>
+
+        <div style="position: absolute; top: 30%; left:10px; ">
+            <i style="font-size: 30px; color:ivory;" (click)="prev()" class="far fa-caret-square-left"></i>
+        </div>
+
+ 
+
+     
   </div>
+
+

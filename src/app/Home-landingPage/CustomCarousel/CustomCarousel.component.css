@@ -1,0 +1,95 @@
+
+
+
+.click{
+    animation: nextSlide 1s ease-in;  
+}
+
+img{
+    border-radius: 0 0 50px;
+}
+
+div h2{
+    position: absolute;
+    top: 10vh;
+    left: 5%;
+    width: 35vw;
+    text-transform: uppercase;
+    color: white;
+}
+div p{
+    position: absolute;
+    top: 25vh;
+    left: 5%;
+    width: 35vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.185);
+    padding:10px; 
+    border-radius: 10px;
+    animation: textAnimation 2s ease-in
+}
+
+.onChange{
+    animation: headingAnimation 1s ease-in-out
+}
+
+ 
+@keyframes nextSlide{
+    0%{
+        opacity: .0;
+        
+    }
+    25%{
+        opacity: .55;
+    }
+    75%{
+        opacity: .85;
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+
+@keyframes headingAnimation{
+    0%{
+        opacity: .0;
+        transform: translate(-100px)
+        
+    }
+    25%{
+        opacity: .55;
+    }
+    75%{
+        opacity: .75;
+        transform: translate(20px)
+
+        /* transform: translate(0px) */
+
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px)
+
+    }
+}
+
+@keyframes textAnimation{
+    0%{
+        opacity: .0;
+        
+    }
+    25%{
+        opacity: 0.0;
+    }
+    85%{
+        opacity: .75;
+        /* transform: translate(0px) */
+
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px)
+
+    }
+}

@@ -71,7 +71,8 @@
     .innerSlideshow{
         position: relative;
         background-color: rgb(255, 255, 255);
-        height: 90vh;   
+        height: 76vh;   
+        border-radius: 0 0 50px
     }
 
     .modalInner{

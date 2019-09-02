@@ -25,6 +25,7 @@ import { Template1Component } from './A-templates/template1/template1.component'
     
     {path:'online-store', component: MyStoreComponent,children:[
       {path:'shop', component:Product1Component},
+      {path:'serum', component:Product2Component},
       {path:':code', component:ProductsPreviewComponent},
     ]},
 
